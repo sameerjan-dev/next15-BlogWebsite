@@ -1,10 +1,11 @@
+'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import styles from "./links.module.css"
 import NavLink from './navLink/navLink'
 
 
- const Links = [
+ const links = [
         {
         title : "HomePage",
         path:"/"
@@ -29,7 +30,7 @@ export default function Links() {
     return (
        <div className={styles.container}>
     <div className={styles.links}>
-          {Links.map((link) => (
+          {links.map((link) => (
               <NavLink link={link} key={link.title}>{link.title}</NavLink>
           ))}{
               session ? (
@@ -48,7 +49,7 @@ export default function Links() {
             <button className={styles.menuButton} onClick={() => setOpen((prev) => !prev)}>Menu</button>{
                  open && (
         <div className={styles.mobileLinks}>
-          {Links.map((link) => (
+          {links.map((link) => (
             <NavLink item={link} key={link.title} />
           ))}
         </div>

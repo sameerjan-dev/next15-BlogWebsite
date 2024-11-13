@@ -1,9 +1,14 @@
-import React from 'react'
+import styles from "./footer.module.css";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <div>
-      Footer
+    <div className={styles.container}>
+      <div className={styles.logo}>SJ's TechnoHub</div>
+      <div className={styles.text}>
+        SJ's TechnoHub © All rights reserved.
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default Footer;
